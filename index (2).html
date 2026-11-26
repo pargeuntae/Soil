@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="ko"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>건태 데일리</title>
+    <!-- Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Pretendard 웹폰트 -->
+    <link rel="stylesheet" as="style" crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+    <style>
+        body {
+            font-family: 'Pretendard', 'Malgun Gothic', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #f1f5f9;
+            color: #1e293b;
+        }
+        /* 스크롤바 깔끔하게 처리 */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* 편집 모드 점선 테두리 애니메이션 */
+        .edit-border {
+            outline: 2px dashed #3b82f6;
+            outline-offset: -2px;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-5{bottom:1.25rem}.left-3{left:0.75rem}.right-0{right:0px}.right-2\.5{right:0.625rem}.right-5{right:1.25rem}.top-0{top:0px}.top-1\.5{top:0.375rem}.top-2{top:0.5rem}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-1{margin-top:0.25rem;margin-bottom:0.25rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-5{margin-bottom:1.25rem}.mt-2{margin-top:0.5rem}.mb-3{margin-bottom:0.75rem}.mt-0\.5{margin-top:0.125rem}.ml-1{margin-left:0.25rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-4{height:1rem}.h-5{height:1.25rem}.h-\[500px\]{height:500px}.min-h-screen{min-height:100vh}.w-4{width:1rem}.w-48{width:12rem}.w-5{width:1.25rem}.w-full{width:100%}.max-w-\[1600px\]{max-width:1600px}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.translate-y-20{--tw-translate-y:5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-x-4{column-gap:1rem}.gap-y-2{row-gap:0.5rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-100 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(241 245 249 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.whitespace-nowrap{white-space:nowrap}.break-all{word-break:break-all}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-0{border-width:0px}.border-b{border-bottom-width:1px}.border-r{border-right-width:1px}.border-l{border-left-width:1px}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200\/70{border-color:rgb(226 232 240 / 0.7)}.border-slate-200\/80{border-color:rgb(226 232 240 / 0.8)}.bg-\[\#1e293b\]{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-lime-100{--tw-bg-opacity:1;background-color:rgb(236 252 203 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-sky-100{--tw-bg-opacity:1;background-color:rgb(224 242 254 / var(--tw-bg-opacity, 1))}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.bg-sky-600{--tw-bg-opacity:1;background-color:rgb(2 132 199 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.bg-amber-300{--tw-bg-opacity:1;background-color:rgb(252 211 77 / var(--tw-bg-opacity, 1))}.bg-red-500\/80{background-color:rgb(239 68 68 / 0.8)}.p-1\.5{padding:0.375rem}.p-2\.5{padding:0.625rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.pl-9{padding-left:2.25rem}.pr-2{padding-right:0.5rem}.pr-7{padding-right:1.75rem}.pt-2{padding-top:0.5rem}.pb-3{padding-bottom:0.75rem}.pl-1\.5{padding-left:0.375rem}.text-left{text-align:left}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.text-\[11px\]{font-size:11px}.text-\[15px\]{font-size:15px}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.font-normal{font-weight:400}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-lime-700{--tw-text-opacity:1;color:rgb(77 124 15 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-sky-600{--tw-text-opacity:1;color:rgb(2 132 199 / var(--tw-text-opacity, 1))}.text-sky-700{--tw-text-opacity:1;color:rgb(3 105 161 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-lime-800{--tw-text-opacity:1;color:rgb(63 98 18 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.placeholder-slate-400::placeholder{--tw-placeholder-opacity:1;color:rgb(148 163 184 / var(--tw-placeholder-opacity, 1))}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.first\:pt-0:first-child{padding-top:0px}.last\:pb-0:last-child{padding-bottom:0px}.hover\:bg-amber-200:hover{--tw-bg-opacity:1;background-color:rgb(253 230 138 / var(--tw-bg-opacity, 1))}.hover\:bg-amber-600:hover{--tw-bg-opacity:1;background-color:rgb(217 119 6 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-200:hover{--tw-bg-opacity:1;background-color:rgb(167 243 208 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-lime-200:hover{--tw-bg-opacity:1;background-color:rgb(217 249 157 / var(--tw-bg-opacity, 1))}.hover\:bg-purple-200:hover{--tw-bg-opacity:1;background-color:rgb(233 213 255 / var(--tw-bg-opacity, 1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.hover\:bg-red-500:hover{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.hover\:bg-sky-200:hover{--tw-bg-opacity:1;background-color:rgb(186 230 253 / var(--tw-bg-opacity, 1))}.hover\:bg-sky-500:hover{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-white\/20:hover{background-color:rgb(255 255 255 / 0.2)}.hover\:bg-sky-50:hover{--tw-bg-opacity:1;background-color:rgb(240 249 255 / var(--tw-bg-opacity, 1))}.hover\:bg-sky-400:hover{--tw-bg-opacity:1;background-color:rgb(56 189 248 / var(--tw-bg-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-sky-600:hover{--tw-text-opacity:1;color:rgb(2 132 199 / var(--tw-text-opacity, 1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-sky-400:focus{--tw-border-opacity:1;border-color:rgb(56 189 248 / var(--tw-border-opacity, 1))}.focus\:border-sky-500:focus{--tw-border-opacity:1;border-color:rgb(14 165 233 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 640px){.sm\:w-56{width:14rem}.sm\:flex-grow-0{flex-grow:0}.sm\:p-5{padding:1.25rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:w-auto{width:auto}.lg\:w-\[42\%\]{width:42%}.lg\:w-\[58\%\]{width:58%}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:justify-end{justify-content:flex-end}}</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.bottom-5{bottom:1.25rem}.left-3{left:0.75rem}.right-0{right:0px}.right-2\.5{right:0.625rem}.right-5{right:1.25rem}.top-0{top:0px}.top-1\.5{top:0.375rem}.top-2{top:0.5rem}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-1{margin-top:0.25rem;margin-bottom:0.25rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-5{margin-bottom:1.25rem}.ml-1{margin-left:0.25rem}.mt-0\.5{margin-top:0.125rem}.mt-2{margin-top:0.5rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-4{height:1rem}.h-5{height:1.25rem}.h-\[500px\]{height:500px}.min-h-screen{min-height:100vh}.w-4{width:1rem}.w-48{width:12rem}.w-5{width:1.25rem}.w-full{width:100%}.max-w-\[1600px\]{max-width:1600px}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.translate-y-20{--tw-translate-y:5rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-x-4{column-gap:1rem}.gap-y-2{row-gap:0.5rem}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-slate-100 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(241 245 249 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.whitespace-nowrap{white-space:nowrap}.break-all{word-break:break-all}.rounded{border-radius:0.25rem}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-0{border-width:0px}.border-b{border-bottom-width:1px}.border-l{border-left-width:1px}.border-r{border-right-width:1px}.border-amber-300{--tw-border-opacity:1;border-color:rgb(252 211 77 / var(--tw-border-opacity, 1))}.border-slate-100{--tw-border-opacity:1;border-color:rgb(241 245 249 / var(--tw-border-opacity, 1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240 / var(--tw-border-opacity, 1))}.border-slate-200\/70{border-color:rgb(226 232 240 / 0.7)}.border-slate-200\/80{border-color:rgb(226 232 240 / 0.8)}.border-slate-300{--tw-border-opacity:1;border-color:rgb(203 213 225 / var(--tw-border-opacity, 1))}.border-slate-600{--tw-border-opacity:1;border-color:rgb(71 85 105 / var(--tw-border-opacity, 1))}.bg-\[\#1e293b\]{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-300{--tw-bg-opacity:1;background-color:rgb(252 211 77 / var(--tw-bg-opacity, 1))}.bg-amber-500{--tw-bg-opacity:1;background-color:rgb(245 158 11 / var(--tw-bg-opacity, 1))}.bg-blue-100{--tw-bg-opacity:1;background-color:rgb(219 234 254 / var(--tw-bg-opacity, 1))}.bg-emerald-100{--tw-bg-opacity:1;background-color:rgb(209 250 229 / var(--tw-bg-opacity, 1))}.bg-emerald-600{--tw-bg-opacity:1;background-color:rgb(5 150 105 / var(--tw-bg-opacity, 1))}.bg-lime-100{--tw-bg-opacity:1;background-color:rgb(236 252 203 / var(--tw-bg-opacity, 1))}.bg-purple-100{--tw-bg-opacity:1;background-color:rgb(243 232 255 / var(--tw-bg-opacity, 1))}.bg-red-500\/80{background-color:rgb(239 68 68 / 0.8)}.bg-red-600{--tw-bg-opacity:1;background-color:rgb(220 38 38 / var(--tw-bg-opacity, 1))}.bg-sky-100{--tw-bg-opacity:1;background-color:rgb(224 242 254 / var(--tw-bg-opacity, 1))}.bg-sky-500{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.bg-sky-600{--tw-bg-opacity:1;background-color:rgb(2 132 199 / var(--tw-bg-opacity, 1))}.bg-slate-100{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.bg-slate-200{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.bg-slate-50{--tw-bg-opacity:1;background-color:rgb(248 250 252 / var(--tw-bg-opacity, 1))}.bg-slate-700{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.bg-slate-800{--tw-bg-opacity:1;background-color:rgb(30 41 59 / var(--tw-bg-opacity, 1))}.bg-slate-900{--tw-bg-opacity:1;background-color:rgb(15 23 42 / var(--tw-bg-opacity, 1))}.bg-slate-900\/60{background-color:rgb(15 23 42 / 0.6)}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/10{background-color:rgb(255 255 255 / 0.1)}.bg-indigo-100{--tw-bg-opacity:1;background-color:rgb(224 231 255 / var(--tw-bg-opacity, 1))}.p-1\.5{padding:0.375rem}.p-2\.5{padding:0.625rem}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pb-3{padding-bottom:0.75rem}.pl-1\.5{padding-left:0.375rem}.pl-9{padding-left:2.25rem}.pr-2{padding-right:0.5rem}.pr-7{padding-right:1.75rem}.pt-2{padding-top:0.5rem}.text-left{text-align:left}.text-\[11px\]{font-size:11px}.text-\[15px\]{font-size:15px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.tracking-tight{letter-spacing:-0.025em}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.text-blue-600{--tw-text-opacity:1;color:rgb(37 99 235 / var(--tw-text-opacity, 1))}.text-blue-800{--tw-text-opacity:1;color:rgb(30 64 175 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-lime-700{--tw-text-opacity:1;color:rgb(77 124 15 / var(--tw-text-opacity, 1))}.text-purple-700{--tw-text-opacity:1;color:rgb(126 34 206 / var(--tw-text-opacity, 1))}.text-red-500{--tw-text-opacity:1;color:rgb(239 68 68 / var(--tw-text-opacity, 1))}.text-red-600{--tw-text-opacity:1;color:rgb(220 38 38 / var(--tw-text-opacity, 1))}.text-sky-600{--tw-text-opacity:1;color:rgb(2 132 199 / var(--tw-text-opacity, 1))}.text-sky-700{--tw-text-opacity:1;color:rgb(3 105 161 / var(--tw-text-opacity, 1))}.text-slate-200{--tw-text-opacity:1;color:rgb(226 232 240 / var(--tw-text-opacity, 1))}.text-slate-300{--tw-text-opacity:1;color:rgb(203 213 225 / var(--tw-text-opacity, 1))}.text-slate-400{--tw-text-opacity:1;color:rgb(148 163 184 / var(--tw-text-opacity, 1))}.text-slate-600{--tw-text-opacity:1;color:rgb(71 85 105 / var(--tw-text-opacity, 1))}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85 / var(--tw-text-opacity, 1))}.text-slate-800{--tw-text-opacity:1;color:rgb(30 41 59 / var(--tw-text-opacity, 1))}.text-slate-950{--tw-text-opacity:1;color:rgb(2 6 23 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-800{--tw-text-opacity:1;color:rgb(6 95 70 / var(--tw-text-opacity, 1))}.text-indigo-800{--tw-text-opacity:1;color:rgb(55 48 163 / var(--tw-text-opacity, 1))}.text-lime-800{--tw-text-opacity:1;color:rgb(63 98 18 / var(--tw-text-opacity, 1))}.placeholder-slate-400::placeholder{--tw-placeholder-opacity:1;color:rgb(148 163 184 / var(--tw-placeholder-opacity, 1))}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.first\:pt-0:first-child{padding-top:0px}.last\:pb-0:last-child{padding-bottom:0px}.hover\:bg-amber-200:hover{--tw-bg-opacity:1;background-color:rgb(253 230 138 / var(--tw-bg-opacity, 1))}.hover\:bg-amber-600:hover{--tw-bg-opacity:1;background-color:rgb(217 119 6 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-200:hover{--tw-bg-opacity:1;background-color:rgb(167 243 208 / var(--tw-bg-opacity, 1))}.hover\:bg-emerald-500:hover{--tw-bg-opacity:1;background-color:rgb(16 185 129 / var(--tw-bg-opacity, 1))}.hover\:bg-lime-200:hover{--tw-bg-opacity:1;background-color:rgb(217 249 157 / var(--tw-bg-opacity, 1))}.hover\:bg-purple-200:hover{--tw-bg-opacity:1;background-color:rgb(233 213 255 / var(--tw-bg-opacity, 1))}.hover\:bg-red-50:hover{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity, 1))}.hover\:bg-red-500:hover{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity, 1))}.hover\:bg-sky-200:hover{--tw-bg-opacity:1;background-color:rgb(186 230 253 / var(--tw-bg-opacity, 1))}.hover\:bg-sky-400:hover{--tw-bg-opacity:1;background-color:rgb(56 189 248 / var(--tw-bg-opacity, 1))}.hover\:bg-sky-50:hover{--tw-bg-opacity:1;background-color:rgb(240 249 255 / var(--tw-bg-opacity, 1))}.hover\:bg-sky-500:hover{--tw-bg-opacity:1;background-color:rgb(14 165 233 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-100:hover{--tw-bg-opacity:1;background-color:rgb(241 245 249 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-200:hover{--tw-bg-opacity:1;background-color:rgb(226 232 240 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-600:hover{--tw-bg-opacity:1;background-color:rgb(71 85 105 / var(--tw-bg-opacity, 1))}.hover\:bg-slate-700:hover{--tw-bg-opacity:1;background-color:rgb(51 65 85 / var(--tw-bg-opacity, 1))}.hover\:bg-white\/20:hover{background-color:rgb(255 255 255 / 0.2)}.hover\:text-sky-600:hover{--tw-text-opacity:1;color:rgb(2 132 199 / var(--tw-text-opacity, 1))}.hover\:text-slate-900:hover{--tw-text-opacity:1;color:rgb(15 23 42 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:underline:hover{-webkit-text-decoration-line:underline;text-decoration-line:underline}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-sky-400:focus{--tw-border-opacity:1;border-color:rgb(56 189 248 / var(--tw-border-opacity, 1))}.focus\:border-sky-500:focus{--tw-border-opacity:1;border-color:rgb(14 165 233 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 640px){.sm\:w-56{width:14rem}.sm\:flex-grow-0{flex-grow:0}.sm\:p-5{padding:1.25rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:w-\[42\%\]{width:42%}.lg\:w-\[58\%\]{width:58%}.lg\:w-auto{width:auto}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:flex-row{flex-direction:row}.lg\:justify-end{justify-content:flex-end}}</style></head>
+<body class="min-h-screen flex flex-col">
+
+    <!-- 상단 고정 내비게이션 바 -->
+    <header class="sticky top-0 z-40 bg-[#1e293b] text-white shadow-md">
+        <div class="max-w-[1600px] mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-3">
+            <!-- 좌측: 타이틀 및 탭 버튼 -->
+            <div class="flex items-center gap-3 overflow-x-auto no-scrollbar w-full lg:w-auto">
+                <div class="flex items-center gap-2 pr-2 border-r border-slate-600 shrink-0">
+                    <span class="text-xl">📘</span>
+                    <h1 class="font-bold text-lg tracking-tight text-white">건태 데일리</h1>
+                </div>
+                <nav id="tab-nav" class="flex items-center gap-1.5" role="tablist">
+                    <button type="button" data-tab="main" class="tab-btn px-4 py-2 rounded-full text-sm font-bold transition-all bg-sky-500 text-white shadow-sm whitespace-nowrap">뉴스/업무</button>
+                    <button type="button" data-tab="family" class="tab-btn px-4 py-2 rounded-full text-sm font-bold transition-all bg-white/10 text-slate-200 hover:bg-white/20 whitespace-nowrap">가족</button>
+                    <button type="button" data-tab="economy" class="tab-btn px-4 py-2 rounded-full text-sm font-bold transition-all bg-white/10 text-slate-200 hover:bg-white/20 whitespace-nowrap">경제</button>
+                    <button type="button" data-tab="hobby" class="tab-btn px-4 py-2 rounded-full text-sm font-bold transition-all bg-white/10 text-slate-200 hover:bg-white/20 whitespace-nowrap">취미</button>
+                </nav>
+            </div>
+
+            <!-- 우측: 빠른 검색 + 편집 및 내보내기 컨트롤 -->
+            <div class="flex flex-wrap items-center gap-2 w-full lg:w-auto justify-between lg:justify-end">
+                <!-- 검색창 -->
+                <div class="relative flex-grow sm:flex-grow-0 sm:w-56">
+                    <input type="text" id="search-input" placeholder="링크·메모 빠른 검색..." class="w-full bg-slate-800 text-sm text-white placeholder-slate-400 rounded-full pl-9 pr-7 py-1.5 border border-slate-600 focus:outline-none focus:border-sky-400 transition">
+                    <svg class="w-4 h-4 text-slate-400 absolute left-3 top-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <button type="button" id="clear-search" class="hidden absolute right-2.5 top-1.5 text-slate-400 hover:text-white text-xs font-bold">✕</button>
+                </div>
+
+                <!-- 기능 버튼 그룹 -->
+                <div class="flex items-center gap-1.5">
+                    <button type="button" id="toggle-edit-btn" class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-amber-300 hover:bg-amber-600 text-slate-950 transition shadow-sm cursor-pointer">
+                        <span id="edit-icon">✏️</span>
+                        <span id="edit-label">편집 모드 ON (완료)</span>
+                    </button>
+
+                    <button type="button" id="download-html-btn" title="현재 내용을 포함한 index.html 파일을 다운로드합니다 (GitHub 업로드용)" class="flex items-center gap-1 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-emerald-600 hover:bg-emerald-500 text-white transition shadow-sm cursor-pointer">
+                        <span>💾</span>
+                        <span>HTML 저장</span>
+                    </button>
+
+                    <!-- 더보기 메뉴 (백업/복원/초기화) -->
+                    <div class="relative">
+                        <button type="button" id="more-menu-btn" class="p-1.5 rounded-full bg-slate-700 hover:bg-slate-600 text-slate-200 transition" title="데이터 백업 및 설정">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"></path>
+                            </svg>
+                        </button>
+                        <div id="more-dropdown" class="hidden absolute right-0 mt-2 w-48 bg-white rounded-xl shadow-xl border border-slate-200 py-1.5 text-slate-700 text-sm z-50">
+                            <button type="button" id="export-json-btn" class="w-full text-left px-4 py-2 hover:bg-slate-100 flex items-center gap-2">
+                                <span>📤</span> 데이터 백업 (JSON)
+                            </button>
+                            <label class="w-full text-left px-4 py-2 hover:bg-slate-100 flex items-center gap-2 cursor-pointer">
+                                <span>📥</span> 데이터 복원 (JSON)
+                                <input type="file" id="import-json-input" accept=".json" class="hidden">
+                            </label>
+                            <hr class="my-1 border-slate-200">
+                            <button type="button" id="reset-default-btn" class="w-full text-left px-4 py-2 hover:bg-red-50 text-red-600 flex items-center gap-2">
+                                <span>🔄</span> 초기 상태로 되돌리기
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 편집 모드 안내 배너 -->
+        <div id="edit-banner" class="bg-amber-100 text-amber-900 border-b border-amber-300 px-4 py-2 text-xs sm:text-sm">
+            <div class="max-w-[1600px] mx-auto flex flex-wrap items-center justify-between gap-2">
+                <div class="flex items-center gap-2 font-medium">
+                    <span class="px-2 py-0.5 bg-amber-500 text-white rounded font-bold text-xs">편집 중</span>
+                    <span>각 카드의 <strong>[+ 항목 추가]</strong>나 항목 옆 <strong>[수정/삭제]</strong>를 눌러 바로 고치세요. 완료 후 우측 상단 <strong>[💾 HTML 저장]</strong>을 누르면 GitHub에 올릴 파일이 다운로드됩니다!</span>
+                </div>
+                <button type="button" id="add-card-btn" class="px-3 py-1 bg-slate-800 hover:bg-slate-700 text-white rounded-lg text-xs font-bold transition">
+                    + 현재 탭에 새 카드 추가
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 알림 토스트 메시지 -->
+    <div id="toast" class="fixed bottom-5 right-5 z-50 transform transition-all duration-300 bg-slate-900 text-white px-4 py-3 rounded-xl shadow-lg text-sm font-medium flex items-center gap-2 translate-y-20 opacity-0">
+        <span id="toast-icon">✅</span>
+        <span id="toast-msg">항목이 저장되었습니다.</span>
+    </div>
+
+    <!-- 메인 콘텐츠 영역 -->
+    <main id="dashboard-container" class="flex-grow max-w-[1600px] w-full mx-auto p-4 sm:p-5">
+                    <div class="flex flex-col lg:flex-row gap-4">
+                        <div class="w-full lg:w-[42%] flex flex-col gap-4">
+                            
+                <section class="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-200/80 overflow-hidden flex flex-col edit-border">
+                    <div class="px-5 py-3 bg-[#1e293b] text-white font-bold text-base flex items-center justify-between gap-2">
+                        <span>📰 오늘의 주요 뉴스</span>
+                        
+                            <div class="flex items-center gap-1.5">
+                                <button type="button" onclick="openAddItemModal('main', 'card-main-news')" class="px-2.5 py-1 rounded-lg bg-sky-500 hover:bg-sky-400 text-white text-xs font-bold transition shadow-xs">
+                                    + 항목 추가
+                                </button>
+                                <button type="button" onclick="deleteCard('main', 'card-main-news')" class="px-2 py-1 rounded-lg bg-red-500/80 hover:bg-red-500 text-white text-xs font-bold transition" title="카드 삭제">
+                                    삭제
+                                </button>
+                            </div>
+                        
+                    </div>
+                    <div class="p-4 flex-grow">
+                        
+                <div class="pb-3 mb-3 border-b border-slate-100 flex flex-wrap items-center gap-x-4 gap-y-2">
+                    
+                        <div class="inline-flex items-center gap-1.5 bg-slate-50 hover:bg-sky-50 px-2.5 py-1 rounded-lg border border-slate-200/70 transition">
+                            <span class="px-1.5 py-0.5 rounded text-[11px] font-bold bg-blue-100 text-blue-800">회사</span>
+                            <a href="https://ep.isaneng.co.kr/s_index_ISAN.aspx?linkurl=" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-700 hover:text-sky-600">(주)이산</a>
+                            
+                                <span class="ml-1 inline-flex items-center gap-1 border-l border-slate-300 pl-1.5">
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-news', 0, true)" class="text-xs text-blue-600 hover:underline font-bold" title="수정">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-news', 0, true)" class="text-xs text-red-500 hover:underline font-bold" title="삭제">삭제</button>
+                                </span>
+                            
+                        </div>
+                    
+                        <div class="inline-flex items-center gap-1.5 bg-slate-50 hover:bg-sky-50 px-2.5 py-1 rounded-lg border border-slate-200/70 transition">
+                            <span class="px-1.5 py-0.5 rounded text-[11px] font-bold bg-slate-200 text-slate-700">날씨</span>
+                            <a href="https://www.weather.go.kr/w/index.do" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-700 hover:text-sky-600">날씨</a>
+                            
+                                <span class="ml-1 inline-flex items-center gap-1 border-l border-slate-300 pl-1.5">
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-news', 1, true)" class="text-xs text-blue-600 hover:underline font-bold" title="수정">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-news', 1, true)" class="text-xs text-red-500 hover:underline font-bold" title="삭제">삭제</button>
+                                </span>
+                            
+                        </div>
+                    
+                        <div class="inline-flex items-center gap-1.5 bg-slate-50 hover:bg-sky-50 px-2.5 py-1 rounded-lg border border-slate-200/70 transition">
+                            <span class="px-1.5 py-0.5 rounded text-[11px] font-bold bg-amber-100 text-amber-800">경제</span>
+                            <a href="https://www.msn.com/ko-kr/money/indexdetails/ks11-kr-index/fi-ajsd6h?uxmode=ruby&amp;ocid=widgetonlockscreen&amp;id=ajsd6h" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-700 hover:text-sky-600">코스피</a>
+                            
+                                <span class="ml-1 inline-flex items-center gap-1 border-l border-slate-300 pl-1.5">
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-news', 2, true)" class="text-xs text-blue-600 hover:underline font-bold" title="수정">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-news', 2, true)" class="text-xs text-red-500 hover:underline font-bold" title="삭제">삭제</button>
+                                </span>
+                            
+                        </div>
+                    
+                        <div class="inline-flex items-center gap-1.5 bg-slate-50 hover:bg-sky-50 px-2.5 py-1 rounded-lg border border-slate-200/70 transition">
+                            <span class="px-1.5 py-0.5 rounded text-[11px] font-bold bg-slate-200 text-slate-700">뉴스</span>
+                            <a href="https://docs.google.com/document/d/1h_rRsxBCq_qfdq23rd3b9EsIdWq3wvgROYZxY9T512E/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-700 hover:text-sky-600">영어공부</a>
+                            
+                                <span class="ml-1 inline-flex items-center gap-1 border-l border-slate-300 pl-1.5">
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-news', 3, true)" class="text-xs text-blue-600 hover:underline font-bold" title="수정">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-news', 3, true)" class="text-xs text-red-500 hover:underline font-bold" title="삭제">삭제</button>
+                                </span>
+                            
+                        </div>
+                    
+                        <div class="inline-flex items-center gap-1.5 bg-slate-50 hover:bg-sky-50 px-2.5 py-1 rounded-lg border border-slate-200/70 transition">
+                            <span class="px-1.5 py-0.5 rounded text-[11px] font-bold bg-slate-200 text-slate-700">버스</span>
+                            <a href="https://www.gbis.go.kr/gbis2014/schBus.action?cmd=mainSearchText&amp;gubun=busInfo&amp;searchText=5-1&amp;routeId=241250001" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-700 hover:text-sky-600">마 5-1</a>
+                            
+                                <span class="ml-1 inline-flex items-center gap-1 border-l border-slate-300 pl-1.5">
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-news', 4, true)" class="text-xs text-blue-600 hover:underline font-bold" title="수정">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-news', 4, true)" class="text-xs text-red-500 hover:underline font-bold" title="삭제">삭제</button>
+                                </span>
+                            
+                        </div>
+                    
+                </div>
+            
+                        
+                <ul class="divide-y divide-slate-100">
+                    
+                        <li class="py-2.5 first:pt-0 last:pb-0 flex items-start justify-between gap-2 group">
+                            <div class="flex items-start gap-2 leading-relaxed">
+                                <span class="mt-0.5 shrink-0 px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-800">업무</span>
+                                <a href="https://v.daum.net/v/20261126174122073" target="_blank" rel="noopener noreferrer" class="text-[15px] font-medium text-slate-700 hover:text-sky-600 hover:underline break-all">노소영 추가소송</a>
+                            </div>
+                            
+                                <div class="shrink-0 flex items-center gap-1.5 bg-slate-100 px-2 py-0.5 rounded-lg">
+                                    <button type="button" onclick="moveItem('main', 'card-main-news', 0, -1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="위로">▲</button>
+                                    <button type="button" onclick="moveItem('main', 'card-main-news', 0, 1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="아래로">▼</button>
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-news', 0, false)" class="text-xs text-blue-600 hover:underline font-bold">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-news', 0, false)" class="text-xs text-red-600 hover:underline font-bold">삭제</button>
+                                </div>
+                            
+                        </li>
+                    
+                        <li class="py-2.5 first:pt-0 last:pb-0 flex items-start justify-between gap-2 group">
+                            <div class="flex items-start gap-2 leading-relaxed">
+                                <span class="mt-0.5 shrink-0 px-2 py-0.5 rounded text-xs font-bold bg-slate-200 text-slate-700">뉴스</span>
+                                <a href="https://www.daum.net/" target="_blank" rel="noopener noreferrer" class="text-[15px] font-medium text-slate-700 hover:text-sky-600 hover:underline break-all">다음</a>
+                            </div>
+                            
+                                <div class="shrink-0 flex items-center gap-1.5 bg-slate-100 px-2 py-0.5 rounded-lg">
+                                    <button type="button" onclick="moveItem('main', 'card-main-news', 1, -1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="위로">▲</button>
+                                    <button type="button" onclick="moveItem('main', 'card-main-news', 1, 1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="아래로">▼</button>
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-news', 1, false)" class="text-xs text-blue-600 hover:underline font-bold">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-news', 1, false)" class="text-xs text-red-600 hover:underline font-bold">삭제</button>
+                                </div>
+                            
+                        </li>
+                    
+                        <li class="py-2.5 first:pt-0 last:pb-0 flex items-start justify-between gap-2 group">
+                            <div class="flex items-start gap-2 leading-relaxed">
+                                <span class="mt-0.5 shrink-0 px-2 py-0.5 rounded text-xs font-bold bg-slate-200 text-slate-700">뉴스</span>
+                                <a href="https://sjxtech.kr" target="_blank" rel="noopener noreferrer" class="text-[15px] font-medium text-slate-700 hover:text-sky-600 hover:underline break-all">260305 : 터널단면 자동화(sjxtech.kr)</a>
+                            </div>
+                            
+                                <div class="shrink-0 flex items-center gap-1.5 bg-slate-100 px-2 py-0.5 rounded-lg">
+                                    <button type="button" onclick="moveItem('main', 'card-main-news', 2, -1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="위로">▲</button>
+                                    <button type="button" onclick="moveItem('main', 'card-main-news', 2, 1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="아래로">▼</button>
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-news', 2, false)" class="text-xs text-blue-600 hover:underline font-bold">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-news', 2, false)" class="text-xs text-red-600 hover:underline font-bold">삭제</button>
+                                </div>
+                            
+                        </li>
+                    
+                        <li class="py-2.5 first:pt-0 last:pb-0 flex items-start justify-between gap-2 group">
+                            <div class="flex items-start gap-2 leading-relaxed">
+                                <span class="mt-0.5 shrink-0 px-2 py-0.5 rounded text-xs font-bold bg-slate-200 text-slate-700">뉴스</span>
+                                <span class="text-[15px] font-medium text-slate-700 break-all">260305 : 삼거N지구 급경사지 민전무님과 협의</span>
+                            </div>
+                            
+                                <div class="shrink-0 flex items-center gap-1.5 bg-slate-100 px-2 py-0.5 rounded-lg">
+                                    <button type="button" onclick="moveItem('main', 'card-main-news', 3, -1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="위로">▲</button>
+                                    <button type="button" onclick="moveItem('main', 'card-main-news', 3, 1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="아래로">▼</button>
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-news', 3, false)" class="text-xs text-blue-600 hover:underline font-bold">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-news', 3, false)" class="text-xs text-red-600 hover:underline font-bold">삭제</button>
+                                </div>
+                            
+                        </li>
+                    
+                        <li class="py-2.5 first:pt-0 last:pb-0 flex items-start justify-between gap-2 group">
+                            <div class="flex items-start gap-2 leading-relaxed">
+                                <span class="mt-0.5 shrink-0 px-2 py-0.5 rounded text-xs font-bold bg-slate-200 text-slate-700">뉴스</span>
+                                <span class="text-[15px] font-medium text-slate-700 break-all">260305 : 상하수도부 협조전</span>
+                            </div>
+                            
+                                <div class="shrink-0 flex items-center gap-1.5 bg-slate-100 px-2 py-0.5 rounded-lg">
+                                    <button type="button" onclick="moveItem('main', 'card-main-news', 4, -1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="위로">▲</button>
+                                    <button type="button" onclick="moveItem('main', 'card-main-news', 4, 1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="아래로">▼</button>
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-news', 4, false)" class="text-xs text-blue-600 hover:underline font-bold">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-news', 4, false)" class="text-xs text-red-600 hover:underline font-bold">삭제</button>
+                                </div>
+                            
+                        </li>
+                    
+                </ul>
+            
+                    </div>
+                </section>
+            
+                    <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden flex flex-col">
+                        <div class="px-5 py-3 bg-[#1e293b] text-white font-bold text-base flex items-center justify-between">
+                            <span>📅 업무 일정</span>
+                            <span class="text-xs font-normal text-slate-300">Google Calendar</span>
+                        </div>
+                        <div class="w-full bg-white">
+                            <iframe class="w-full h-[500px] border-0" src="https://calendar.google.com/calendar/embed?src=parkjiban933%40gmail.com&amp;src=ambi4vgbk7qj5hai4kb19fu1q0%40group.calendar.google.com&amp;ctz=Asia%2FSeoul&amp;mode=MONTH&amp;showTitle=0&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" loading="lazy"></iframe>
+                        </div>
+                    </section>
+                
+                        </div>
+                        <div class="w-full lg:w-[58%] flex flex-col gap-4">
+                            
+                <section class="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-200/80 overflow-hidden flex flex-col edit-border">
+                    <div class="px-5 py-3 bg-[#1e293b] text-white font-bold text-base flex items-center justify-between gap-2">
+                        <span>📺 업무 관련 뉴스 및 자료</span>
+                        
+                            <div class="flex items-center gap-1.5">
+                                <button type="button" onclick="openAddItemModal('main', 'card-main-work')" class="px-2.5 py-1 rounded-lg bg-sky-500 hover:bg-sky-400 text-white text-xs font-bold transition shadow-xs">
+                                    + 항목 추가
+                                </button>
+                                <button type="button" onclick="deleteCard('main', 'card-main-work')" class="px-2 py-1 rounded-lg bg-red-500/80 hover:bg-red-500 text-white text-xs font-bold transition" title="카드 삭제">
+                                    삭제
+                                </button>
+                            </div>
+                        
+                    </div>
+                    <div class="p-4 flex-grow">
+                        
+                        
+                <ul class="divide-y divide-slate-100">
+                    
+                        <li class="py-2.5 first:pt-0 last:pb-0 flex items-start justify-between gap-2 group">
+                            <div class="flex items-start gap-2 leading-relaxed">
+                                <span class="mt-0.5 shrink-0 px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-800">업무</span>
+                                <span class="text-[15px] font-medium text-slate-700 break-all">황금동 및 울산반딧불이 실적받기(김동우)</span>
+                            </div>
+                            
+                                <div class="shrink-0 flex items-center gap-1.5 bg-slate-100 px-2 py-0.5 rounded-lg">
+                                    <button type="button" onclick="moveItem('main', 'card-main-work', 0, -1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="위로">▲</button>
+                                    <button type="button" onclick="moveItem('main', 'card-main-work', 0, 1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="아래로">▼</button>
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-work', 0, false)" class="text-xs text-blue-600 hover:underline font-bold">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-work', 0, false)" class="text-xs text-red-600 hover:underline font-bold">삭제</button>
+                                </div>
+                            
+                        </li>
+                    
+                        <li class="py-2.5 first:pt-0 last:pb-0 flex items-start justify-between gap-2 group">
+                            <div class="flex items-start gap-2 leading-relaxed">
+                                <span class="mt-0.5 shrink-0 px-2 py-0.5 rounded text-xs font-bold bg-blue-100 text-blue-800">업무</span>
+                                <span class="text-[15px] font-medium text-slate-700 break-all">신안산선 추가 과업은 관리원 발표끝나고 검토(?)</span>
+                            </div>
+                            
+                                <div class="shrink-0 flex items-center gap-1.5 bg-slate-100 px-2 py-0.5 rounded-lg">
+                                    <button type="button" onclick="moveItem('main', 'card-main-work', 1, -1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="위로">▲</button>
+                                    <button type="button" onclick="moveItem('main', 'card-main-work', 1, 1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="아래로">▼</button>
+                                    <button type="button" onclick="openEditItemModal('main', 'card-main-work', 1, false)" class="text-xs text-blue-600 hover:underline font-bold">수정</button>
+                                    <button type="button" onclick="deleteItem('main', 'card-main-work', 1, false)" class="text-xs text-red-600 hover:underline font-bold">삭제</button>
+                                </div>
+                            
+                        </li>
+                    
+                </ul>
+            
+                    </div>
+                </section>
+            
+                        </div>
+                    </div>
+                </main>
+
+    <!-- 항목 추가 / 수정 모달 -->
+    <div id="item-modal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4 hidden">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden border border-slate-200">
+            <div class="px-5 py-4 bg-[#1e293b] text-white flex items-center justify-between">
+                <h3 id="modal-title" class="font-bold text-base">항목 수정</h3>
+                <button type="button" id="close-modal-btn" class="text-slate-300 hover:text-white text-lg font-bold">✕</button>
+            </div>
+            <form id="item-form" class="p-5 space-y-4">
+                <input type="hidden" id="form-tab-id" value="main">
+                <input type="hidden" id="form-card-id" value="card-main-news">
+                <input type="hidden" id="form-item-index" value="0">
+                <input type="hidden" id="form-is-quick" value="false">
+
+                <div id="quick-option-wrap" class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-xl border border-slate-200 hidden">
+                    <input type="checkbox" id="form-as-pill" class="w-4 h-4 text-sky-600 rounded">
+                    <label for="form-as-pill" class="text-xs sm:text-sm font-medium text-slate-700 cursor-pointer">
+                        상단 가로 한 줄(바로가기 버튼 형태)로 배치하기
+                    </label>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">분류 태그 (예: 업무, 뉴스, 가족, 요리, 취미)</label>
+                    <div class="flex gap-1.5 mb-2 flex-wrap">
+                        <button type="button" class="preset-tag px-2 py-0.5 text-xs rounded bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold" data-tag="업무">업무</button>
+                        <button type="button" class="preset-tag px-2 py-0.5 text-xs rounded bg-sky-100 hover:bg-sky-200 text-sky-700 font-semibold" data-tag="뉴스">뉴스</button>
+                        <button type="button" class="preset-tag px-2 py-0.5 text-xs rounded bg-emerald-100 hover:bg-emerald-200 text-emerald-700 font-semibold" data-tag="가족">가족</button>
+                        <button type="button" class="preset-tag px-2 py-0.5 text-xs rounded bg-amber-100 hover:bg-amber-200 text-amber-700 font-semibold" data-tag="경제">경제</button>
+                        <button type="button" class="preset-tag px-2 py-0.5 text-xs rounded bg-lime-100 hover:bg-lime-200 text-lime-700 font-semibold" data-tag="요리">요리</button>
+                        <button type="button" class="preset-tag px-2 py-0.5 text-xs rounded bg-purple-100 hover:bg-purple-200 text-purple-700 font-semibold" data-tag="취미">취미</button>
+                    </div>
+                    <input type="text" id="form-tag" placeholder="태그 입력 (예: 업무)" required="" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-sky-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">제목 / 메모 내용 *</label>
+                    <input type="text" id="form-text" placeholder="표시할 제목이나 메모를 입력하세요" required="" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-sky-500">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">연결 링크 URL (없으면 비워두세요)</label>
+                    <input type="text" id="form-url" placeholder="https://..." class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-sky-500">
+                </div>
+
+                <div class="pt-2 flex justify-end gap-2">
+                    <button type="button" id="cancel-modal-btn" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold">취소</button>
+                    <button type="submit" class="px-5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-sm font-bold shadow-sm">저장하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 새 카드 추가 모달 -->
+    <div id="card-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full overflow-hidden border border-slate-200">
+            <div class="px-5 py-4 bg-[#1e293b] text-white flex items-center justify-between">
+                <h3 class="font-bold text-base">새 카드 박스 추가</h3>
+                <button type="button" id="close-card-modal" class="text-slate-300 hover:text-white text-lg font-bold">✕</button>
+            </div>
+            <form id="card-form" class="p-5 space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-slate-600 mb-1">카드 제목 (이모지 포함 가능)</label>
+                    <input type="text" id="new-card-title" placeholder="예: 📌 지반기술 자료실" required="" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm focus:outline-none focus:border-sky-500">
+                </div>
+                <div id="panel-select-wrap" class="hidden">
+                    <label class="block text-xs font-bold text-slate-600 mb-1">배치 위치 (뉴스/업무 탭)</label>
+                    <select id="new-card-panel" class="w-full px-3.5 py-2 rounded-xl border border-slate-300 text-sm">
+                        <option value="right">오른쪽 패널 (업무 자료 영역)</option>
+                        <option value="left">왼쪽 패널 (주요 뉴스 아래)</option>
+                    </select>
+                </div>
+                <div class="pt-2 flex justify-end gap-2">
+                    <button type="button" id="cancel-card-modal" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold">취소</button>
+                    <button type="submit" class="px-5 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 text-white text-sm font-bold">카드 생성</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- 확인 다이얼로그 모달 (confirm() 대체) -->
+    <div id="confirm-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-xs flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl shadow-2xl max-w-sm w-full p-5 border border-slate-200">
+            <h4 class="font-bold text-base text-slate-800 mb-2">확인해 주세요</h4>
+            <p id="confirm-msg" class="text-sm text-slate-600 mb-5">정말 삭제하시겠습니까?</p>
+            <div class="flex justify-end gap-2">
+                <button type="button" id="confirm-no" class="px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-bold">취소</button>
+                <button type="button" id="confirm-yes" class="px-4 py-2 rounded-xl bg-red-600 hover:bg-red-500 text-white text-sm font-bold">확인</button>
+            </div>
+        </div>
+    </div>
+
+    <script id="dashboard-script">
+        // =========================================================================
+        // 1. 기본 데이터 구조 (기존 HTML의 모든 탭, 카드, 링크를 그대로 보존)
+        // =========================================================================
+        const DEFAULT_DATA = {
+            tabs: {
+                main: {
+                    name: "뉴스/업무",
+                    layout: "split", // 좌측 1 : 우측 1.4 비율 분할
+                    cards: [
+                        {
+                            id: "card-main-news",
+                            title: "📰 오늘의 주요 뉴스",
+                            panel: "left",
+                            quickLinks: [
+                                { tag: "회사", text: "(주)이산", url: "https://ep.isaneng.co.kr/s_index_ISAN.aspx?linkurl=" },
+                                { tag: "날씨", text: "날씨", url: "https://www.weather.go.kr/w/index.do" },
+                                { tag: "경제", text: "코스피", url: "https://www.msn.com/ko-kr/money/indexdetails/ks11-kr-index/fi-ajsd6h?uxmode=ruby&ocid=widgetonlockscreen&id=ajsd6h" },
+                                { tag: "뉴스", text: "영어공부", url: "https://docs.google.com/document/d/1h_rRsxBCq_qfdq23rd3b9EsIdWq3wvgROYZxY9T512E/edit?usp=sharing" },
+                                { tag: "버스", text: "마 5-1", url: "https://www.gbis.go.kr/gbis2014/schBus.action?cmd=mainSearchText&gubun=busInfo&searchText=5-1&routeId=241250001" }
+                            ],
+                            items: [
+                                { tag: "업무", text: "요약문 그림파일 넣기/ 도면을 삽도화", url: "" },
+                                { tag: "뉴스", text: "다음", url: "https://www.daum.net/" },
+                                { tag: "뉴스", text: "260305 : 터널단면 자동화(sjxtech.kr)", url: "https://sjxtech.kr" },
+                                { tag: "뉴스", text: "260305 : 삼거N지구 급경사지 민전무님과 협의", url: "" },
+                                { tag: "뉴스", text: "260305 : 상하수도부 협조전", url: "" }
+                            ]
+                        },
+                        {
+                            id: "card-main-calendar",
+                            title: "📅 업무 일정",
+                            panel: "left",
+                            isCalendar: true,
+                            calendarUrl: "https://calendar.google.com/calendar/embed?src=parkjiban933%40gmail.com&src=ambi4vgbk7qj5hai4kb19fu1q0%40group.calendar.google.com&ctz=Asia%2FSeoul&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0",
+                            quickLinks: [],
+                            items: []
+                        },
+                        {
+                            id: "card-main-work",
+                            title: "📺 업무 관련 뉴스 및 자료",
+                            panel: "right",
+                            quickLinks: [],
+                            items: [
+                                { tag: "업무", text: "황금동 및 울산반딧불이 실적받기(김동우)", url: "" },
+                                { tag: "업무", text: "신안산선 추가 과업은 관리원 발표끝나고 검토(?)", url: "" }
+                            ]
+                        }
+                    ]
+                },
+                family: {
+                    name: "가족",
+                    layout: "grid",
+                    cards: [
+                        {
+                            id: "card-fam-1",
+                            title: "👨‍👩‍👧‍👦 건태가족 소식",
+                            quickLinks: [
+                                { tag: "은행", text: "계좌 및 증권", url: "https://docs.google.com/document/d/1BC4HFWkeJA0u-7uXKh6tPVDQRoySYmtqJPqw6lMCnTU/edit?usp=sharing" },
+                                { tag: "날씨", text: "날씨", url: "https://www.weather.go.kr/w/index.do" }
+                            ],
+                            items: []
+                        },
+                        {
+                            id: "card-fam-2",
+                            title: "👧 수빈이네 소식",
+                            quickLinks: [],
+                            items: [
+                                { tag: "가족", text: "수빈이 학원 스케줄 및 숙제 확인", url: "" }
+                            ]
+                        },
+                        {
+                            id: "card-fam-3",
+                            title: "👧 솔비네 소식",
+                            quickLinks: [],
+                            items: [
+                                { tag: "입학", text: "2026년 3월 2일 : 세명대학교 간호학과 입학", url: "https://www.semyung.ac.kr/kor/sub01_01_03_02.do" },
+                                { tag: "학습", text: "갈릴레오 법칙", url: "https://www.youtube.com/shorts/Bg4APtZ6yOgk" },
+                                { tag: "생일", text: "3월18일 생일", url: "https://youtu.be/rFCUUXAqOlM?si=-b9SVQsy0BcMSgRo" },
+                                { tag: "요리", text: "오이초무침", url: "https://youtube.com/shorts/KTrNzrnv0l8?si=7DcLX8m2dTrqRi_Y" }
+                            ]
+                        },
+                        {
+                            id: "card-fam-4",
+                            title: "👦 준후네 소식",
+                            quickLinks: [],
+                            items: [
+                                { tag: "가족", text: "2026년 3월 2일 : 2학년 새학기 시작", url: "https://pyeongchon-m.goeay.kr/pyeongchon-m/main.do" }
+                            ]
+                        },
+                        {
+                            id: "card-fam-5",
+                            title: "🏠 본가소식",
+                            quickLinks: [],
+                            items: [
+                                { tag: "가족", text: "2026년 2월 17일 : 설날(준현-준후-준범-솔비-소은)", url: "https://pyeongchon-m.goeay.kr/pyeongchon-m/main.do" }
+                            ]
+                        },
+                        {
+                            id: "card-fam-6",
+                            title: "🏠 처가소식",
+                            quickLinks: [],
+                            items: [
+                                { tag: "가족", text: "2026년 2월 20일 : 장모님 돌아가심", url: "https://docs.google.com/document/d/1pTsoDFnICh95dBlSSsFrqXdqE3usSwx__OLeVzizW-U/edit?usp=sharing" }
+                            ]
+                        }
+                    ]
+                },
+                economy: {
+                    name: "경제",
+                    layout: "grid",
+                    cards: [
+                        {
+                            id: "card-eco-1",
+                            title: "📈 내역",
+                            quickLinks: [],
+                            items: [
+                                { tag: "내역", text: "단가와 대가차이", url: "https://docs.google.com/document/d/1hrMGfTWHM76HsDlZz8F54ykcO383l7ksejgcauPmmCs/edit?usp=sharing" },
+                                { tag: "내역", text: "특정공법심의", url: "https://docs.google.com/document/d/1TlpgfUbW0hDXtfKhFAI41DAsEK0ZHJKTOfhQ9cbne_I/edit?usp=sharing" }
+                            ]
+                        },
+                        {
+                            id: "card-eco-2",
+                            title: "📈 증시 현황",
+                            quickLinks: [],
+                            items: [
+                                { tag: "경제", text: "오늘의 코스피/코스닥 지수", url: "" }
+                            ]
+                        }
+                    ]
+                },
+                hobby: {
+                    name: "취미",
+                    layout: "grid",
+                    cards: [
+                        {
+                            id: "card-hob-1",
+                            title: "🌱 헬스 및 운동",
+                            quickLinks: [],
+                            items: [
+                                { tag: "취미", text: "신나는 음악", url: "https://youtu.be/2vbFDXYC0C8?si=grn6t1lBs8-obo4z" }
+                            ]
+                        },
+                        {
+                            id: "card-hob-2",
+                            title: "🌱 요리",
+                            quickLinks: [],
+                            items: [
+                                { tag: "요리", text: "감자볶음", url: "https://youtu.be/rFCUUXAqOlM?si=-b9SVQsy0BcMSgRo" },
+                                { tag: "요리", text: "오이초무침", url: "https://youtube.com/shorts/KTrNzrnv0l8?si=7DcLX8m2dTrqRi_Y" },
+                                { tag: "요리", text: "배추나물무침", url: "https://www.youtube.com/watch?v=SBJiJQZdZK4" },
+                                { tag: "요리", text: "무채나물(식초)", url: "https://www.youtube.com/watch?v=w0D2v3ptfbU" },
+                                { tag: "요리", text: "마늘쫑", url: "https://youtube.com/shorts/AWLXpg8b-Tg?si=OgRlv3osMy_NjPm_" },
+                                { tag: "요리", text: "꽈리어묵볶음", url: "https://youtube.com/shorts/slvyuZhWOfM?si=RNA8LMXVYQNU59uV" }
+                            ]
+                        },
+                        {
+                            id: "card-hob-3",
+                            title: "🌱 역사 및 과학 그리고 사랑",
+                            quickLinks: [],
+                            items: [
+                                { tag: "취미", text: "조선의 왕들(27인)랩", url: "https://youtu.be/qCOrAQhKvWY?si=GO-v1h_1E5jMSb0n" },
+                                { tag: "취미", text: "갈릴레오 법칙", url: "https://www.youtube.com/shorts/Bg4APtZ6yOgk" },
+                                { tag: "취미", text: "후라이팬 사용법", url: "https://www.youtube.com/shorts/wWtj7YYS7YI" },
+                                { tag: "취미", text: "감자볶음", url: "https://youtu.be/rFCUUXAqOlM?si=-b9SVQsy0BcMSgRo" },
+                                { tag: "취미", text: "오이초무침", url: "https://youtube.com/shorts/KTrNzrnv0l8?si=7DcLX8m2dTrqRi_Y" },
+                                { tag: "취미", text: "인테리어", url: "https://docs.google.com/document/d/1LiJpTi_vFKxts2-l1J0nIy-kuquH1lXT2kNegWAGTUc/edit?usp=sharing" }
+                            ]
+                        },
+                        {
+                            id: "card-hob-4",
+                            title: "🌱 정치및시사",
+                            quickLinks: [],
+                            items: [
+                                { tag: "취미", text: "매불쇼", url: "https://www.youtube.com/@maebulshow" },
+                                { tag: "취미", text: "겸손은힘들다", url: "https://www.youtube.com/@gyeomsonisnothing" }
+                            ]
+                        },
+                        {
+                            id: "card-hob-5",
+                            title: "🌱 동물 및 식물",
+                            quickLinks: [],
+                            items: [
+                                { tag: "취미", text: "필레아 페페로", url: "https://www.coupang.com/np/search?q=%ED%95%84%EB%A0%88%EC%95%84%20%ED%8E%98%ED%8E%98%EB%A1%9C%EB%AF%B8%EC%98%A4%EC%9D%B4%EB%8D%B0%EC%8A%A4&channel=recent&traceId=mwmuo3ai" },
+                                { tag: "취미", text: "오이초무침", url: "https://youtube.com/shorts/KTrNzrnv0l8?si=7DcLX8m2dTrqRi_Y" }
+                            ]
+                        },
+                        {
+                            id: "card-hob-6",
+                            title: "🌱 쇼핑",
+                            quickLinks: [],
+                            items: [
+                                { tag: "취미", text: "잡고기 매운탕", url: "https://www.coupang.com/vp/products/8643434153?itemId=25086015990&vendorItemId=92089827089&sourceType=srp_product_ads&clickEventId=d46022e0-e3d7-11f1-963d-2cee16ac3dde&clickEventId=d46022e0-e3d7-11f1-963d-2cee16ac3dde&korePlacement=15&korePlacement=15&koreSubPlacement=1&koreSubPlacement=1&q=%EC%9E%A1%EA%B3%A0%EA%B8%B0+%EB%A7%A4%EC%9A%B4%ED%83%95&searchId=593709a48208299&searchRank=0&traceId=mwn3h2bw" },
+                                { tag: "취미", text: "오이초무침", url: "https://youtube.com/shorts/KTrNzrnv0l8?si=7DcLX8m2dTrqRi_Y" }
+                            ]
+                        }
+                    ]
+                }
+            }
+        };
+
+        // 내보내기 시 갱신되는 내장 데이터 슬롯 (HTML 저장 버튼 클릭 시 이 부분이 최신 데이터로 치환됨)
+        /* EMBEDDED_DATA_START */
+        const EMBEDDED_DATA = {
+    "tabs": {
+        "main": {
+            "name": "뉴스/업무",
+            "layout": "split",
+            "cards": [
+                {
+                    "id": "card-main-news",
+                    "title": "📰 오늘의 주요 뉴스",
+                    "panel": "left",
+                    "quickLinks": [
+                        {
+                            "tag": "회사",
+                            "text": "(주)이산",
+                            "url": "https://ep.isaneng.co.kr/s_index_ISAN.aspx?linkurl="
+                        },
+                        {
+                            "tag": "날씨",
+                            "text": "날씨",
+                            "url": "https://www.weather.go.kr/w/index.do"
+                        },
+                        {
+                            "tag": "경제",
+                            "text": "코스피",
+                            "url": "https://www.msn.com/ko-kr/money/indexdetails/ks11-kr-index/fi-ajsd6h?uxmode=ruby&ocid=widgetonlockscreen&id=ajsd6h"
+                        },
+                        {
+                            "tag": "뉴스",
+                            "text": "영어공부",
+                            "url": "https://docs.google.com/document/d/1h_rRsxBCq_qfdq23rd3b9EsIdWq3wvgROYZxY9T512E/edit?usp=sharing"
+                        },
+                        {
+                            "tag": "버스",
+                            "text": "마 5-1",
+                            "url": "https://www.gbis.go.kr/gbis2014/schBus.action?cmd=mainSearchText&gubun=busInfo&searchText=5-1&routeId=241250001"
+                        }
+                    ],
+                    "items": [
+                        {
+                            "tag": "업무",
+                            "text": "노소영 추가소송",
+                            "url": "https://v.daum.net/v/20261126174122073"
+                        },
+                        {
+                            "tag": "뉴스",
+                            "text": "다음",
+                            "url": "https://www.daum.net/"
+                        },
+                        {
+                            "tag": "뉴스",
+                            "text": "260305 : 터널단면 자동화(sjxtech.kr)",
+                            "url": "https://sjxtech.kr"
+                        },
+                        {
+                            "tag": "뉴스",
+                            "text": "260305 : 삼거N지구 급경사지 민전무님과 협의",
+                            "url": ""
+                        },
+                        {
+                            "tag": "뉴스",
+                            "text": "260305 : 상하수도부 협조전",
+                            "url": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "card-main-calendar",
+                    "title": "📅 업무 일정",
+                    "panel": "left",
+                    "isCalendar": true,
+                    "calendarUrl": "https://calendar.google.com/calendar/embed?src=parkjiban933%40gmail.com&src=ambi4vgbk7qj5hai4kb19fu1q0%40group.calendar.google.com&ctz=Asia%2FSeoul&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0",
+                    "quickLinks": [],
+                    "items": []
+                },
+                {
+                    "id": "card-main-work",
+                    "title": "📺 업무 관련 뉴스 및 자료",
+                    "panel": "right",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "업무",
+                            "text": "황금동 및 울산반딧불이 실적받기(김동우)",
+                            "url": ""
+                        },
+                        {
+                            "tag": "업무",
+                            "text": "신안산선 추가 과업은 관리원 발표끝나고 검토(?)",
+                            "url": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "family": {
+            "name": "가족",
+            "layout": "grid",
+            "cards": [
+                {
+                    "id": "card-fam-1",
+                    "title": "👨‍👩‍👧‍👦 건태가족 소식",
+                    "quickLinks": [
+                        {
+                            "tag": "은행",
+                            "text": "계좌 및 증권",
+                            "url": "https://docs.google.com/document/d/1BC4HFWkeJA0u-7uXKh6tPVDQRoySYmtqJPqw6lMCnTU/edit?usp=sharing"
+                        },
+                        {
+                            "tag": "날씨",
+                            "text": "날씨",
+                            "url": "https://www.weather.go.kr/w/index.do"
+                        }
+                    ],
+                    "items": []
+                },
+                {
+                    "id": "card-fam-2",
+                    "title": "👧 수빈이네 소식",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "가족",
+                            "text": "수빈이 학원 스케줄 및 숙제 확인",
+                            "url": ""
+                        }
+                    ]
+                },
+                {
+                    "id": "card-fam-3",
+                    "title": "👧 솔비네 소식",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "입학",
+                            "text": "2026년 3월 2일 : 세명대학교 간호학과 입학",
+                            "url": "https://www.semyung.ac.kr/kor/sub01_01_03_02.do"
+                        },
+                        {
+                            "tag": "학습",
+                            "text": "갈릴레오 법칙",
+                            "url": "https://www.youtube.com/shorts/Bg4APtZ6yOgk"
+                        },
+                        {
+                            "tag": "생일",
+                            "text": "3월18일 생일",
+                            "url": "https://youtu.be/rFCUUXAqOlM?si=-b9SVQsy0BcMSgRo"
+                        },
+                        {
+                            "tag": "요리",
+                            "text": "오이초무침",
+                            "url": "https://youtube.com/shorts/KTrNzrnv0l8?si=7DcLX8m2dTrqRi_Y"
+                        }
+                    ]
+                },
+                {
+                    "id": "card-fam-4",
+                    "title": "👦 준후네 소식",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "가족",
+                            "text": "2026년 3월 2일 : 2학년 새학기 시작",
+                            "url": "https://pyeongchon-m.goeay.kr/pyeongchon-m/main.do"
+                        }
+                    ]
+                },
+                {
+                    "id": "card-fam-5",
+                    "title": "🏠 본가소식",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "가족",
+                            "text": "2026년 2월 17일 : 설날(준현-준후-준범-솔비-소은)",
+                            "url": "https://pyeongchon-m.goeay.kr/pyeongchon-m/main.do"
+                        }
+                    ]
+                },
+                {
+                    "id": "card-fam-6",
+                    "title": "🏠 처가소식",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "가족",
+                            "text": "2026년 2월 20일 : 장모님 돌아가심",
+                            "url": "https://docs.google.com/document/d/1pTsoDFnICh95dBlSSsFrqXdqE3usSwx__OLeVzizW-U/edit?usp=sharing"
+                        }
+                    ]
+                }
+            ]
+        },
+        "economy": {
+            "name": "경제",
+            "layout": "grid",
+            "cards": [
+                {
+                    "id": "card-eco-1",
+                    "title": "📈 내역",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "내역",
+                            "text": "단가와 대가차이",
+                            "url": "https://docs.google.com/document/d/1hrMGfTWHM76HsDlZz8F54ykcO383l7ksejgcauPmmCs/edit?usp=sharing"
+                        },
+                        {
+                            "tag": "내역",
+                            "text": "특정공법심의",
+                            "url": "https://docs.google.com/document/d/1TlpgfUbW0hDXtfKhFAI41DAsEK0ZHJKTOfhQ9cbne_I/edit?usp=sharing"
+                        }
+                    ]
+                },
+                {
+                    "id": "card-eco-2",
+                    "title": "📈 증시 현황",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "경제",
+                            "text": "오늘의 코스피/코스닥 지수",
+                            "url": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        "hobby": {
+            "name": "취미",
+            "layout": "grid",
+            "cards": [
+                {
+                    "id": "card-hob-1",
+                    "title": "🌱 헬스 및 운동",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "취미",
+                            "text": "신나는 음악",
+                            "url": "https://youtu.be/2vbFDXYC0C8?si=grn6t1lBs8-obo4z"
+                        }
+                    ]
+                },
+                {
+                    "id": "card-hob-2",
+                    "title": "🌱 요리",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "요리",
+                            "text": "감자볶음",
+                            "url": "https://youtu.be/rFCUUXAqOlM?si=-b9SVQsy0BcMSgRo"
+                        },
+                        {
+                            "tag": "요리",
+                            "text": "오이초무침",
+                            "url": "https://youtube.com/shorts/KTrNzrnv0l8?si=7DcLX8m2dTrqRi_Y"
+                        },
+                        {
+                            "tag": "요리",
+                            "text": "배추나물무침",
+                            "url": "https://www.youtube.com/watch?v=SBJiJQZdZK4"
+                        },
+                        {
+                            "tag": "요리",
+                            "text": "무채나물(식초)",
+                            "url": "https://www.youtube.com/watch?v=w0D2v3ptfbU"
+                        },
+                        {
+                            "tag": "요리",
+                            "text": "마늘쫑",
+                            "url": "https://youtube.com/shorts/AWLXpg8b-Tg?si=OgRlv3osMy_NjPm_"
+                        },
+                        {
+                            "tag": "요리",
+                            "text": "꽈리어묵볶음",
+                            "url": "https://youtube.com/shorts/slvyuZhWOfM?si=RNA8LMXVYQNU59uV"
+                        }
+                    ]
+                },
+                {
+                    "id": "card-hob-3",
+                    "title": "🌱 역사 및 과학 그리고 사랑",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "취미",
+                            "text": "조선의 왕들(27인)랩",
+                            "url": "https://youtu.be/qCOrAQhKvWY?si=GO-v1h_1E5jMSb0n"
+                        },
+                        {
+                            "tag": "취미",
+                            "text": "갈릴레오 법칙",
+                            "url": "https://www.youtube.com/shorts/Bg4APtZ6yOgk"
+                        },
+                        {
+                            "tag": "취미",
+                            "text": "후라이팬 사용법",
+                            "url": "https://www.youtube.com/shorts/wWtj7YYS7YI"
+                        },
+                        {
+                            "tag": "취미",
+                            "text": "감자볶음",
+                            "url": "https://youtu.be/rFCUUXAqOlM?si=-b9SVQsy0BcMSgRo"
+                        },
+                        {
+                            "tag": "취미",
+                            "text": "오이초무침",
+                            "url": "https://youtube.com/shorts/KTrNzrnv0l8?si=7DcLX8m2dTrqRi_Y"
+                        },
+                        {
+                            "tag": "취미",
+                            "text": "인테리어",
+                            "url": "https://docs.google.com/document/d/1LiJpTi_vFKxts2-l1J0nIy-kuquH1lXT2kNegWAGTUc/edit?usp=sharing"
+                        }
+                    ]
+                },
+                {
+                    "id": "card-hob-4",
+                    "title": "🌱 정치및시사",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "취미",
+                            "text": "매불쇼",
+                            "url": "https://www.youtube.com/@maebulshow"
+                        },
+                        {
+                            "tag": "취미",
+                            "text": "겸손은힘들다",
+                            "url": "https://www.youtube.com/@gyeomsonisnothing"
+                        }
+                    ]
+                },
+                {
+                    "id": "card-hob-5",
+                    "title": "🌱 동물 및 식물",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "취미",
+                            "text": "필레아 페페로",
+                            "url": "https://www.coupang.com/np/search?q=%ED%95%84%EB%A0%88%EC%95%84%20%ED%8E%98%ED%8E%98%EB%A1%9C%EB%AF%B8%EC%98%A4%EC%9D%B4%EB%8D%B0%EC%8A%A4&channel=recent&traceId=mwmuo3ai"
+                        },
+                        {
+                            "tag": "취미",
+                            "text": "오이초무침",
+                            "url": "https://youtube.com/shorts/KTrNzrnv0l8?si=7DcLX8m2dTrqRi_Y"
+                        }
+                    ]
+                },
+                {
+                    "id": "card-hob-6",
+                    "title": "🌱 쇼핑",
+                    "quickLinks": [],
+                    "items": [
+                        {
+                            "tag": "취미",
+                            "text": "잡고기 매운탕",
+                            "url": "https://www.coupang.com/vp/products/8643434153?itemId=25086015990&vendorItemId=92089827089&sourceType=srp_product_ads&clickEventId=d46022e0-e3d7-11f1-963d-2cee16ac3dde&clickEventId=d46022e0-e3d7-11f1-963d-2cee16ac3dde&korePlacement=15&korePlacement=15&koreSubPlacement=1&koreSubPlacement=1&q=%EC%9E%A1%EA%B3%A0%EA%B8%B0+%EB%A7%A4%EC%9A%B4%ED%83%95&searchId=593709a48208299&searchRank=0&traceId=mwn3h2bw"
+                        },
+                        {
+                            "tag": "취미",
+                            "text": "오이초무침",
+                            "url": "https://youtube.com/shorts/KTrNzrnv0l8?si=7DcLX8m2dTrqRi_Y"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+};
+        /* EMBEDDED_DATA_END */
+
+        const STORAGE_KEY = "geontae_daily_dashboard_v1";
+
+        // 애플리케이션 상태
+        let appData = loadInitialData();
+        let activeTab = "main";
+        let isEditMode = false;
+        let searchQuery = "";
+        let confirmCallback = null;
+
+        // 초기 데이터 로드 (localStorage -> 내장 데이터 -> 기본 데이터 순)
+        function loadInitialData() {
+            try {
+                const saved = localStorage.getItem(STORAGE_KEY);
+                if (saved) {
+                    return JSON.parse(saved);
+                }
+            } catch (e) {
+                console.warn("로컬 스토리지 읽기 오류:", e);
+            }
+            if (EMBEDDED_DATA) {
+                return JSON.parse(JSON.stringify(EMBEDDED_DATA));
+            }
+            return JSON.parse(JSON.stringify(DEFAULT_DATA));
+        }
+
+        // 데이터 자동 저장
+        function saveData(showToastMsg = "변경사항이 자동 저장되었습니다.") {
+            try {
+                localStorage.setItem(STORAGE_KEY, JSON.stringify(appData));
+                if (showToastMsg) showToast(showToastMsg);
+            } catch (e) {
+                showToast("저장에 실패했습니다. 브라우저 용량을 확인하세요.", "⚠️");
+            }
+        }
+
+        // 토스트 알림 표시
+        function showToast(msg, icon = "✅") {
+            const toast = document.getElementById("toast");
+            document.getElementById("toast-msg").textContent = msg;
+            document.getElementById("toast-icon").textContent = icon;
+            toast.classList.remove("translate-y-20", "opacity-0");
+            clearTimeout(window.toastTimer);
+            window.toastTimer = setTimeout(() => {
+                toast.classList.add("translate-y-20", "opacity-0");
+            }, 2600);
+        }
+
+        // 태그 색상 매핑
+        function getTagStyle(tag) {
+            const t = (tag || "").trim();
+            if (["업무", "회사"].includes(t)) return "bg-blue-100 text-blue-800";
+            if (["뉴스", "버스", "날씨"].includes(t)) return "bg-slate-200 text-slate-700";
+            if (["경제", "내역", "은행"].includes(t)) return "bg-amber-100 text-amber-800";
+            if (["가족", "입학"].includes(t)) return "bg-emerald-100 text-emerald-800";
+            if (["요리", "취미", "생일"].includes(t)) return "bg-lime-100 text-lime-800";
+            return "bg-indigo-100 text-indigo-800";
+        }
+
+        // HTML 이스케이프 (XSS 방지)
+        function escapeHtml(str) {
+            if (!str) return "";
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+
+        // =========================================================================
+        // 2. 화면 렌더링 엔진
+        // =========================================================================
+        function renderDashboard() {
+            const container = document.getElementById("dashboard-container");
+            const query = searchQuery.trim().toLowerCase();
+
+            // 검색어가 있을 때는 전체 탭에서 일치하는 항목을 모아 보여줌
+            if (query) {
+                renderSearchResults(container, query);
+                return;
+            }
+
+            const tabObj = appData.tabs[activeTab];
+            if (!tabObj) return;
+
+            if (tabObj.layout === "split") {
+                const leftCards = tabObj.cards.filter(c => c.panel !== "right");
+                const rightCards = tabObj.cards.filter(c => c.panel === "right");
+
+                container.innerHTML = `
+                    <div class="flex flex-col lg:flex-row gap-4">
+                        <div class="w-full lg:w-[42%] flex flex-col gap-4">
+                            ${leftCards.map(card => renderCardHTML(activeTab, card)).join("")}
+                        </div>
+                        <div class="w-full lg:w-[58%] flex flex-col gap-4">
+                            ${rightCards.map(card => renderCardHTML(activeTab, card)).join("")}
+                        </div>
+                    </div>
+                `;
+            } else {
+                container.innerHTML = `
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        ${tabObj.cards.map(card => renderCardHTML(activeTab, card)).join("")}
+                    </div>
+                `;
+            }
+        }
+
+        // 검색 결과 렌더링
+        function renderSearchResults(container, query) {
+            let results = [];
+            Object.entries(appData.tabs).forEach(([tabId, tabObj]) => {
+                tabObj.cards.forEach(card => {
+                    if (card.isCalendar) return;
+                    (card.quickLinks || []).forEach(item => {
+                        if ((item.text + item.tag).toLowerCase().includes(query)) {
+                            results.push({ tabName: tabObj.name, cardTitle: card.title, item });
+                        }
+                    });
+                    (card.items || []).forEach(item => {
+                        if ((item.text + item.tag).toLowerCase().includes(query)) {
+                            results.push({ tabName: tabObj.name, cardTitle: card.title, item });
+                        }
+                    });
+                });
+            });
+
+            if (results.length === 0) {
+                container.innerHTML = `
+                    <div class="bg-white rounded-2xl p-10 text-center shadow-sm border border-slate-200">
+                        <p class="text-slate-500 text-base">"<strong>${escapeHtml(searchQuery)}</strong>"에 대한 검색 결과가 없습니다.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = `
+                <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                    <div class="px-5 py-3.5 bg-[#1e293b] text-white font-bold flex items-center justify-between">
+                        <span>🔍 검색 결과 (${results.length}건)</span>
+                        <span class="text-xs font-normal text-slate-300">전체 탭 통합 검색</span>
+                    </div>
+                    <div class="p-4 divide-y divide-slate-100">
+                        ${results.map(r => `
+                            <div class="py-2.5 flex flex-wrap items-center justify-between gap-2">
+                                <div class="flex items-center gap-2">
+                                    <span class="px-2 py-0.5 rounded text-xs font-bold ${getTagStyle(r.item.tag)}">${escapeHtml(r.item.tag)}</span>
+                                    ${r.item.url 
+                                        ? `<a href="${escapeHtml(r.item.url)}" target="_blank" rel="noopener noreferrer" class="text-slate-800 hover:text-sky-600 hover:underline font-medium text-sm sm:text-base">${escapeHtml(r.item.text)} ↗</a>`
+                                        : `<span class="text-slate-800 font-medium text-sm sm:text-base">${escapeHtml(r.item.text)}</span>`
+                                    }
+                                </div>
+                                <span class="text-xs text-slate-400 bg-slate-100 px-2 py-0.5 rounded">${escapeHtml(r.tabName)} &gt; ${escapeHtml(r.cardTitle)}</span>
+                            </div>
+                        `).join("")}
+                    </div>
+                </div>
+            `;
+        }
+
+        // 개별 카드 HTML 생성
+        function renderCardHTML(tabId, card) {
+            const editClass = isEditMode ? "edit-border" : "";
+
+            // 구글 캘린더 전용 카드
+            if (card.isCalendar) {
+                return `
+                    <section class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden flex flex-col">
+                        <div class="px-5 py-3 bg-[#1e293b] text-white font-bold text-base flex items-center justify-between">
+                            <span>${escapeHtml(card.title)}</span>
+                            <span class="text-xs font-normal text-slate-300">Google Calendar</span>
+                        </div>
+                        <div class="w-full bg-white">
+                            <iframe class="w-full h-[500px] border-0" src="${escapeHtml(card.calendarUrl)}" loading="lazy"></iframe>
+                        </div>
+                    </section>
+                `;
+            }
+
+            // 상단 가로 바로가기 링크 렌더링
+            const quickLinksHTML = (card.quickLinks && card.quickLinks.length > 0) ? `
+                <div class="pb-3 mb-3 border-b border-slate-100 flex flex-wrap items-center gap-x-4 gap-y-2">
+                    ${card.quickLinks.map((q, idx) => `
+                        <div class="inline-flex items-center gap-1.5 bg-slate-50 hover:bg-sky-50 px-2.5 py-1 rounded-lg border border-slate-200/70 transition">
+                            <span class="px-1.5 py-0.5 rounded text-[11px] font-bold ${getTagStyle(q.tag)}">${escapeHtml(q.tag)}</span>
+                            ${q.url 
+                                ? `<a href="${escapeHtml(q.url)}" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-slate-700 hover:text-sky-600">${escapeHtml(q.text)}</a>`
+                                : `<span class="text-sm font-semibold text-slate-700">${escapeHtml(q.text)}</span>`
+                            }
+                            ${isEditMode ? `
+                                <span class="ml-1 inline-flex items-center gap-1 border-l border-slate-300 pl-1.5">
+                                    <button type="button" onclick="openEditItemModal('${tabId}', '${card.id}', ${idx}, true)" class="text-xs text-blue-600 hover:underline font-bold" title="수정">수정</button>
+                                    <button type="button" onclick="deleteItem('${tabId}', '${card.id}', ${idx}, true)" class="text-xs text-red-500 hover:underline font-bold" title="삭제">삭제</button>
+                                </span>
+                            ` : ""}
+                        </div>
+                    `).join("")}
+                </div>
+            ` : "";
+
+            // 일반 리스트 항목 렌더링
+            const itemsHTML = (card.items && card.items.length > 0) ? `
+                <ul class="divide-y divide-slate-100">
+                    ${card.items.map((item, idx) => `
+                        <li class="py-2.5 first:pt-0 last:pb-0 flex items-start justify-between gap-2 group">
+                            <div class="flex items-start gap-2 leading-relaxed">
+                                <span class="mt-0.5 shrink-0 px-2 py-0.5 rounded text-xs font-bold ${getTagStyle(item.tag)}">${escapeHtml(item.tag)}</span>
+                                ${item.url 
+                                    ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" class="text-[15px] font-medium text-slate-700 hover:text-sky-600 hover:underline break-all">${escapeHtml(item.text)}</a>`
+                                    : `<span class="text-[15px] font-medium text-slate-700 break-all">${escapeHtml(item.text)}</span>`
+                                }
+                            </div>
+                            ${isEditMode ? `
+                                <div class="shrink-0 flex items-center gap-1.5 bg-slate-100 px-2 py-0.5 rounded-lg">
+                                    <button type="button" onclick="moveItem('${tabId}', '${card.id}', ${idx}, -1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="위로">▲</button>
+                                    <button type="button" onclick="moveItem('${tabId}', '${card.id}', ${idx}, 1)" class="text-xs text-slate-600 hover:text-slate-900 font-bold" title="아래로">▼</button>
+                                    <button type="button" onclick="openEditItemModal('${tabId}', '${card.id}', ${idx}, false)" class="text-xs text-blue-600 hover:underline font-bold">수정</button>
+                                    <button type="button" onclick="deleteItem('${tabId}', '${card.id}', ${idx}, false)" class="text-xs text-red-600 hover:underline font-bold">삭제</button>
+                                </div>
+                            ` : ""}
+                        </li>
+                    `).join("")}
+                </ul>
+            ` : (!quickLinksHTML ? `<p class="text-xs text-slate-400 py-2">등록된 항목이 없습니다.</p>` : "");
+
+            return `
+                <section class="bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-slate-200/80 overflow-hidden flex flex-col ${editClass}">
+                    <div class="px-5 py-3 bg-[#1e293b] text-white font-bold text-base flex items-center justify-between gap-2">
+                        <span>${escapeHtml(card.title)}</span>
+                        ${isEditMode ? `
+                            <div class="flex items-center gap-1.5">
+                                <button type="button" onclick="openAddItemModal('${tabId}', '${card.id}')" 
+                                    class="px-2.5 py-1 rounded-lg bg-sky-500 hover:bg-sky-400 text-white text-xs font-bold transition shadow-xs">
+                                    + 항목 추가
+                                </button>
+                                <button type="button" onclick="deleteCard('${tabId}', '${card.id}')" 
+                                    class="px-2 py-1 rounded-lg bg-red-500/80 hover:bg-red-500 text-white text-xs font-bold transition" title="카드 삭제">
+                                    삭제
+                                </button>
+                            </div>
+                        ` : ""}
+                    </div>
+                    <div class="p-4 flex-grow">
+                        ${quickLinksHTML}
+                        ${itemsHTML}
+                    </div>
+                </section>
+            `;
+        }
+
+        // =========================================================================
+        // 3. 항목 추가 / 수정 / 삭제 / 순서이동 로직
+        // =========================================================================
+        function openAddItemModal(tabId, cardId) {
+            document.getElementById("modal-title").textContent = "새 항목 추가";
+            document.getElementById("form-tab-id").value = tabId;
+            document.getElementById("form-card-id").value = cardId;
+            document.getElementById("form-item-index").value = "-1";
+            document.getElementById("form-is-quick").value = "false";
+            document.getElementById("form-as-pill").checked = false;
+            document.getElementById("quick-option-wrap").classList.remove("hidden");
+
+            // 탭에 어울리는 기본 태그 자동 추천
+            const defaultTagMap = { main: "업무", family: "가족", economy: "경제", hobby: "취미" };
+            document.getElementById("form-tag").value = defaultTagMap[tabId] || "업무";
+            document.getElementById("form-text").value = "";
+            document.getElementById("form-url").value = "";
+
+            document.getElementById("item-modal").classList.remove("hidden");
+            document.getElementById("form-text").focus();
+        }
+
+        function openEditItemModal(tabId, cardId, index, isQuick) {
+            const card = appData.tabs[tabId].cards.find(c => c.id === cardId);
+            const list = isQuick ? card.quickLinks : card.items;
+            const item = list[index];
+
+            document.getElementById("modal-title").textContent = "항목 수정";
+            document.getElementById("form-tab-id").value = tabId;
+            document.getElementById("form-card-id").value = cardId;
+            document.getElementById("form-item-index").value = String(index);
+            document.getElementById("form-is-quick").value = String(isQuick);
+            document.getElementById("form-as-pill").checked = isQuick;
+            document.getElementById("quick-option-wrap").classList.add("hidden");
+
+            document.getElementById("form-tag").value = item.tag || "";
+            document.getElementById("form-text").value = item.text || "";
+            document.getElementById("form-url").value = item.url || "";
+
+            document.getElementById("item-modal").classList.remove("hidden");
+            document.getElementById("form-text").focus();
+        }
+
+        function deleteItem(tabId, cardId, index, isQuick) {
+            askConfirm("이 항목을 삭제하시겠습니까?", () => {
+                const card = appData.tabs[tabId].cards.find(c => c.id === cardId);
+                if (isQuick) {
+                    card.quickLinks.splice(index, 1);
+                } else {
+                    card.items.splice(index, 1);
+                }
+                saveData("항목이 삭제되었습니다.");
+                renderDashboard();
+            });
+        }
+
+        function moveItem(tabId, cardId, index, direction) {
+            const card = appData.tabs[tabId].cards.find(c => c.id === cardId);
+            const targetIdx = index + direction;
+            if (targetIdx < 0 || targetIdx >= card.items.length) return;
+            const temp = card.items[index];
+            card.items[index] = card.items[targetIdx];
+            card.items[targetIdx] = temp;
+            saveData("");
+            renderDashboard();
+        }
+
+        function deleteCard(tabId, cardId) {
+            askConfirm("이 카드 전체와 내부 항목을 모두 삭제하시겠습니까?", () => {
+                const tab = appData.tabs[tabId];
+                tab.cards = tab.cards.filter(c => c.id !== cardId);
+                saveData("카드가 삭제되었습니다.");
+                renderDashboard();
+            });
+        }
+
+        // 커스텀 확인창 함수
+        function askConfirm(message, onYes) {
+            document.getElementById("confirm-msg").textContent = message;
+            confirmCallback = onYes;
+            document.getElementById("confirm-modal").classList.remove("hidden");
+        }
+
+        // =========================================================================
+        // 4. GitHub 업로드용 독립 실행 HTML 파일 생성 및 다운로드
+        // =========================================================================
+        function downloadStandaloneHTML() {
+            // 현재 전체 HTML 소스를 가져온 뒤 EMBEDDED_DATA 부분을 현재 데이터로 치환
+            let fullHtml = "<!DOCTYPE html>\n" + document.documentElement.outerHTML;
+            const serializedData = JSON.stringify(appData, null, 4);
+
+            // 편집 모드 UI가 열려있을 수 있으므로 초기 상태로 깔끔하게 정리된 데이터 주입
+            const pattern = /\/\* EMBEDDED_DATA_START \*\/[\s\S]*?\/\* EMBEDDED_DATA_END \*\//;
+            const replacement = `/* EMBEDDED_DATA_START */\n        const EMBEDDED_DATA = ${serializedData};\n        /* EMBEDDED_DATA_END */`;
+
+            if (pattern.test(fullHtml)) {
+                fullHtml = fullHtml.replace(pattern, replacement);
+            }
+
+            const blob = new Blob([fullHtml], { type: "text/html;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "index.html";
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+
+            showToast("index.html 다운로드 완료! GitHub에 그대로 올리시면 됩니다.", "🎉");
+        }
+
+        // =========================================================================
+        // 5. 이벤트 리스너 연결
+        // =========================================================================
+        document.addEventListener("DOMContentLoaded", () => {
+            renderDashboard();
+
+            // 탭 전환
+            document.querySelectorAll(".tab-btn").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    activeTab = btn.dataset.tab;
+                    searchQuery = "";
+                    document.getElementById("search-input").value = "";
+                    document.getElementById("clear-search").classList.add("hidden");
+
+                    document.querySelectorAll(".tab-btn").forEach(b => {
+                        b.className = "tab-btn px-4 py-2 rounded-full text-sm font-bold transition-all bg-white/10 text-slate-200 hover:bg-white/20 whitespace-nowrap";
+                    });
+                    btn.className = "tab-btn px-4 py-2 rounded-full text-sm font-bold transition-all bg-sky-500 text-white shadow-sm whitespace-nowrap";
+
+                    renderDashboard();
+                });
+            });
+
+            // 빠른 검색
+            const searchInput = document.getElementById("search-input");
+            const clearSearchBtn = document.getElementById("clear-search");
+            searchInput.addEventListener("input", (e) => {
+                searchQuery = e.target.value;
+                clearSearchBtn.classList.toggle("hidden", !searchQuery);
+                renderDashboard();
+            });
+            clearSearchBtn.addEventListener("click", () => {
+                searchQuery = "";
+                searchInput.value = "";
+                clearSearchBtn.classList.add("hidden");
+                renderDashboard();
+            });
+
+            // 편집 모드 토글
+            const toggleEditBtn = document.getElementById("toggle-edit-btn");
+            toggleEditBtn.addEventListener("click", () => {
+                isEditMode = !isEditMode;
+                const banner = document.getElementById("edit-banner");
+                const label = document.getElementById("edit-label");
+
+                if (isEditMode) {
+                    banner.classList.remove("hidden");
+                    label.textContent = "편집 모드 ON (완료)";
+                    toggleEditBtn.classList.replace("bg-amber-500", "bg-amber-300");
+                } else {
+                    banner.classList.add("hidden");
+                    label.textContent = "편집 모드 OFF";
+                    toggleEditBtn.classList.replace("bg-amber-300", "bg-amber-500");
+                }
+                renderDashboard();
+            });
+
+            // HTML 파일 저장 (GitHub 업로드용)
+            document.getElementById("download-html-btn").addEventListener("click", downloadStandaloneHTML);
+
+            // 더보기 드롭다운 토글
+            const moreBtn = document.getElementById("more-menu-btn");
+            const moreDropdown = document.getElementById("more-dropdown");
+            moreBtn.addEventListener("click", (e) => {
+                e.stopPropagation();
+                moreDropdown.classList.toggle("hidden");
+            });
+            document.addEventListener("click", () => moreDropdown.classList.add("hidden"));
+
+            // JSON 백업 내보내기
+            document.getElementById("export-json-btn").addEventListener("click", () => {
+                const blob = new Blob([JSON.stringify(appData, null, 2)], { type: "application/json" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = `건태데일리_백업_${new Date().toISOString().slice(0, 10)}.json`;
+                a.click();
+                URL.revokeObjectURL(url);
+                showToast("JSON 백업 파일이 저장되었습니다.");
+            });
+
+            // JSON 복원 불러오기
+            document.getElementById("import-json-input").addEventListener("change", (e) => {
+                const file = e.target.files[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = (ev) => {
+                    try {
+                        const parsed = JSON.parse(ev.target.result);
+                        if (parsed && parsed.tabs) {
+                            appData = parsed;
+                            saveData("백업 데이터를 성공적으로 복원했습니다!");
+                            renderDashboard();
+                        } else {
+                            showToast("올바른 백업 파일 형식이 아닙니다.", "⚠️");
+                        }
+                    } catch (err) {
+                        showToast("파일을 읽는 중 오류가 발생했습니다.", "⚠️");
+                    }
+                };
+                reader.readAsText(file);
+                e.target.value = "";
+            });
+
+            // 초기화 버튼
+            document.getElementById("reset-default-btn").addEventListener("click", () => {
+                askConfirm("모든 수정 내역을 지우고 초기 상태로 되돌리시겠습니까?", () => {
+                    localStorage.removeItem(STORAGE_KEY);
+                    appData = JSON.parse(JSON.stringify(DEFAULT_DATA));
+                    renderDashboard();
+                    showToast("초기 상태로 복원되었습니다.");
+                });
+            });
+
+            // 항목 추가/수정 모달 저장
+            document.getElementById("item-form").addEventListener("submit", (e) => {
+                e.preventDefault();
+                const tabId = document.getElementById("form-tab-id").value;
+                const cardId = document.getElementById("form-card-id").value;
+                const index = parseInt(document.getElementById("form-item-index").value, 10);
+                const isQuick = document.getElementById("form-is-quick").value === "true";
+                const asPill = document.getElementById("form-as-pill").checked;
+
+                const newItem = {
+                    tag: document.getElementById("form-tag").value.trim() || "메모",
+                    text: document.getElementById("form-text").value.trim(),
+                    url: document.getElementById("form-url").value.trim()
+                };
+
+                const card = appData.tabs[tabId].cards.find(c => c.id === cardId);
+                if (!card.quickLinks) card.quickLinks = [];
+                if (!card.items) card.items = [];
+
+                if (index === -1) {
+                    // 신규 추가
+                    if (asPill) {
+                        card.quickLinks.push(newItem);
+                    } else {
+                        card.items.push(newItem);
+                    }
+                } else {
+                    // 기존 항목 수정
+                    if (isQuick) {
+                        card.quickLinks[index] = newItem;
+                    } else {
+                        card.items[index] = newItem;
+                    }
+                }
+
+                saveData("항목이 저장되었습니다.");
+                document.getElementById("item-modal").classList.add("hidden");
+                renderDashboard();
+            });
+
+            // 모달 내 프리셋 태그 클릭
+            document.querySelectorAll(".preset-tag").forEach(btn => {
+                btn.addEventListener("click", () => {
+                    document.getElementById("form-tag").value = btn.dataset.tag;
+                });
+            });
+
+            // 항목 모달 닫기
+            document.getElementById("close-modal-btn").addEventListener("click", () => {
+                document.getElementById("item-modal").classList.add("hidden");
+            });
+            document.getElementById("cancel-modal-btn").addEventListener("click", () => {
+                document.getElementById("item-modal").classList.add("hidden");
+            });
+
+            // 새 카드 추가 모달 열기
+            document.getElementById("add-card-btn").addEventListener("click", () => {
+                document.getElementById("new-card-title").value = "";
+                const panelWrap = document.getElementById("panel-select-wrap");
+                panelWrap.classList.toggle("hidden", activeTab !== "main");
+                document.getElementById("card-modal").classList.remove("hidden");
+                document.getElementById("new-card-title").focus();
+            });
+
+            // 새 카드 생성 제출
+            document.getElementById("card-form").addEventListener("submit", (e) => {
+                e.preventDefault();
+                const title = document.getElementById("new-card-title").value.trim();
+                if (!title) return;
+
+                const newCard = {
+                    id: "card-" + Date.now(),
+                    title: title,
+                    panel: activeTab === "main" ? document.getElementById("new-card-panel").value : undefined,
+                    quickLinks: [],
+                    items: []
+                };
+
+                appData.tabs[activeTab].cards.push(newCard);
+                saveData("새 카드가 추가되었습니다.");
+                document.getElementById("card-modal").classList.add("hidden");
+                renderDashboard();
+            });
+
+            document.getElementById("close-card-modal").addEventListener("click", () => {
+                document.getElementById("card-modal").classList.add("hidden");
+            });
+            document.getElementById("cancel-card-modal").addEventListener("click", () => {
+                document.getElementById("card-modal").classList.add("hidden");
+            });
+
+            // 확인 다이얼로그 버튼
+            document.getElementById("confirm-no").addEventListener("click", () => {
+                document.getElementById("confirm-modal").classList.add("hidden");
+                confirmCallback = null;
+            });
+            document.getElementById("confirm-yes").addEventListener("click", () => {
+                document.getElementById("confirm-modal").classList.add("hidden");
+                if (typeof confirmCallback === "function") {
+                    confirmCallback();
+                    confirmCallback = null;
+                }
+            });
+        });
+    </script>
+
+</body></html>
